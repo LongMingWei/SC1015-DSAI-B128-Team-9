@@ -2,12 +2,25 @@
 
 ## About
 
-Our project for SC1015 (Introduction to Data Science and Artificial Intelligence) analyses pokemon 
+Our project for SC1015 (Introduction to Data Science and Artificial Intelligence) analyses pokemon based on numerical and categorical variables to predict their weight using numerical regression methods
 
 ## Problem Definition
 
-- Are we able to predict if a movie is good (rating above 7.2) based on its attributes?
+- Are we able to predict a pokemon's weight based on its other, even seemingly irrelevant attributes?
 - Which model would be the best to predict it?
+
+## Project/Code Outline
+
+- Dropped variables that are definitely irrelevant to our problem statement (such as name)
+- Removed a row with non-numerical data for capture rate and rows with null values of weight (make up a very small minority of our dataset)
+- Analysed weight distribution and decided not to remove outliers 
+- Analysed correlation of numerical variables with weight
+- Converted certain numerical variables into categorical ones and analysed correlation of numerical predictors with weight (also analysed their count to see if their distributions/boxplots are reliable)
+- Filled up missing values of percentage male and type2 to complete the above process
+- Grouped categorical values (with similar boxplots) of certain variables into one value and made new columns based on the new grouping using lambda function
+- Used OneHotEncoder to split the categorical columns into separate new columns and put these new columns into a new dataframe
+- Concatenating the new dataframe with the numerical variables, including the response, we get a clean and prepared dataframe for our Machine Learning segment 
+- Fitted the new dataframe into linear regression and random forest regression models and analysed importance of variables
 
 ## Models Used
 
@@ -16,12 +29,10 @@ Our project for SC1015 (Introduction to Data Science and Artificial Intelligence
 
 ## Conclusion
 
-- Popularity and budget have low linear correlation value with ratings (watch out for bandwagons 🤣)
-- Popularity of the casts and crews have higher linear correlation value with ratings
-- Resampling imbalanced data improved model performance especially on the minority class
-- Logistic Regression did not perform well with non-linearly correlated variables
-- Neural Networks along with SMOTEENN resampling method consistently did well in predicting good movies after 100 training attempts (around 72% accuracy, 70% recall)
-- Yes, it is possible to predict if a movie is good with acceptable amount of accuracy and recall
+- Numeric variables have the highest linear correlation value with weight, especially height
+- In most cases (not all) linear regression without outliers would work the best due to less overfitting/bias and our predictors (especially numerical ones) having strong linear relationship with weight, however the model's reliability will drop significantly for pokemon with weights being outliers
+- We might also need to conduct EDA again to see the new distributions of the variables and find out they are still significant (or insignificant)
+- We may need to gather more data of significant categorical variables outside our dataset to improve accuracy of model, as of now it’s very dependent on numerical continuous variables as categorical variables don’t show a strong enough correlation/pattern
 
 ## What did we learn from this project?
 
@@ -32,7 +43,7 @@ Our project for SC1015 (Introduction to Data Science and Artificial Intelligence
 
 ## Contributors
 
-- Long Ming Wei - Video Editing, Wrote code for Data Preparation and EDA, Fixed coding bugs in general
+- Long Ming Wei - Planned Project Outline and Content, Video Editing, Wrote code for Data Preparation and EDA
 - Adam S Munaverali - Slide Design, Wrote code for EDA and Data Visualization
 - Kevin Lai - Slide Design, Wrote code for Linear and Random Forest Regression
 
