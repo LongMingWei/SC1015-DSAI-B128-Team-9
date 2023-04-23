@@ -37,12 +37,14 @@ Our project for SC1015 (Introduction to Data Science and Artificial Intelligence
 - Kevin Lai - Slide Design, Wrote code for Linear and Random Forest Regression
 
 ## References
+
 Dataset
 - <https://www.kaggle.com/datasets/rounakbanik/pokemon>
 
 Learning sources beyond this course
 - <https://www.geeksforgeeks.org/random-forest-regression-in-python/>
 - <https://www.analyticsvidhya.com/blog/2020/03/one-hot-encoding-vs-label-encoding-using-scikit-learn/>
+
 Images
 - <https://www.mariowiki.com/Pokemon_Trainer>
 - <https://www.pokemon.com/us>
