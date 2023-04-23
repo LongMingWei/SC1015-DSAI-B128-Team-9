@@ -21,6 +21,7 @@ Our project for SC1015 (Introduction to Data Science and Artificial Intelligence
 - Used OneHotEncoder to split the categorical columns into separate new columns and put these new columns into a new dataframe
 - Concatenating the new dataframe with the numerical variables, including the response, we get a clean and prepared dataframe for our Machine Learning segment 
 - Fitted the new dataframe into linear regression and random forest regression models and analysed importance of variables
+- Random forest was slightly less accurate even with GridSearchCV (slightly lower train R^2 and higher test MSE) than linear regression due to its overfitting and bias due to basing its decision on many decision trees and nodes, same case outliers 
 
 ## Models Used
 
@@ -31,8 +32,10 @@ Our project for SC1015 (Introduction to Data Science and Artificial Intelligence
 
 - Numeric variables have the highest linear correlation value with weight, especially height
 - In most cases (not all) linear regression without outliers would work the best due to less overfitting/bias and our predictors (especially numerical ones) having strong linear relationship with weight, however the model's reliability will drop significantly for pokemon with weights being outliers
-- We might also need to conduct EDA again to see the new distributions of the variables and find out they are still significant (or insignificant)
+- We might also need to conduct EDA again to see the new distributions of the variables and find out they are still significant (or insignificant) (as seen from is_legendary example)
 - We may need to gather more data of significant categorical variables outside our dataset to improve accuracy of model, as of now it’s very dependent on numerical continuous variables as categorical variables don’t show a strong enough correlation/pattern
+- For now we will still use linear regression model without outliers to predict pokemon which seem to have average weight (as seen from their height or other factors), and linear regression with outliers for pokemon that are more likely to be outliers
+- Random forest as of now is more prone to overfitting and take longer to run as well due to having to process many decision trees and deciding factors
 
 ## What did we learn from this project?
 
