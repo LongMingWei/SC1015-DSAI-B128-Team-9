@@ -43,7 +43,7 @@ Our project for SC1015 (Introduction to Data Science and Artificial Intelligence
 
 ## Contributors
 
-- Long Ming Wei - Planned Project Outline and Content, Video Editing, Wrote code for Data Preparation and EDA
+- Long Ming Wei - Planned Project Outline and Content, Slide Design, Video Editing, Wrote code for Data Preparation and EDA
 - Adam S Munaverali - Slide Design, Wrote code for EDA and Data Visualization
 - Kevin Lai - Slide Design, Wrote code for Linear and Random Forest Regression
 
