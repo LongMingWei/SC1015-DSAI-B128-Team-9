@@ -38,7 +38,8 @@ Our project for SC1015 (Introduction to Data Science and Artificial Intelligence
 
 ## References
 Dataset
-- <https://www.kaggle.com/datasets/rounakbanik/pokemon> 
+- <https://www.kaggle.com/datasets/rounakbanik/pokemon>
+
 Learning sources beyond this course
 - <https://www.geeksforgeeks.org/random-forest-regression-in-python/>
 - <https://www.analyticsvidhya.com/blog/2020/03/one-hot-encoding-vs-label-encoding-using-scikit-learn/>
