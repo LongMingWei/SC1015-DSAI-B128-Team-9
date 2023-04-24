@@ -4,6 +4,8 @@
 
 Our project for SC1015 (Introduction to Data Science and Artificial Intelligence) analyses pokemon based on numerical and categorical variables to predict their weight using numerical regression methods
 
+Our slides can be accessed here in case some images and numbers in the video are unclear: https://docs.google.com/presentation/d/1nRM6PiexxtzpU6YCErOCGQ6V36r9hXDca2axIXhBB2g/edit?usp=sharing
+
 ## Problem Definition
 
 - Are we able to predict a pokemon's weight based on its other, even seemingly irrelevant attributes?
