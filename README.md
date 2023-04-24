@@ -17,8 +17,9 @@ EDA
 - Analysed weight distribution and decided not to remove outliers as based on other distributions we analysed like height, outliers are still useful in predicting weight
 - Analysed correlation of numerical variables with weight
 - Converted certain numerical variables into categorical ones and analysed correlation of numerical predictors with weight (also analysed their count to see if their distributions/boxplots are reliable)
-- Certain categorical variables like abilities and classification were ignored as there were too few datapoints for each unique category, resulting in their distributions not being reliable enough to predict weight 
 - Filled up missing values of percentage male and type2 to complete the above process
+- Certain categorical variables like abilities and classification were ignored as there were too few datapoints for each unique category, resulting in their distributions not being reliable enough to predict weight 
+
 
 Regression
 - Grouped categorical values (with similar boxplots) of certain variables into one value and made new columns based on the new grouping using lambda function
