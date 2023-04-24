@@ -11,16 +11,20 @@ Our project for SC1015 (Introduction to Data Science and Artificial Intelligence
 
 ## Project/Code Outline
 
+EDA
 - Dropped variables that are definitely irrelevant to our problem statement (such as name)
 - Removed a row with non-numerical data for capture rate and rows with null values of weight (make up a very small minority of our dataset)
 - Analysed weight distribution and decided not to remove outliers 
 - Analysed correlation of numerical variables with weight
 - Converted certain numerical variables into categorical ones and analysed correlation of numerical predictors with weight (also analysed their count to see if their distributions/boxplots are reliable)
 - Filled up missing values of percentage male and type2 to complete the above process
+
+Regression
 - Grouped categorical values (with similar boxplots) of certain variables into one value and made new columns based on the new grouping using lambda function
 - Used OneHotEncoder to split the categorical columns into separate new columns and put these new columns into a new dataframe
 - Concatenating the new dataframe with the numerical variables, including the response, we get a clean and prepared dataframe for our Machine Learning segment 
 - Fitted the new dataframe into linear regression and random forest regression models and analysed importance of variables
+- Linear regression without outliers fared better than with outliers, but certain distributions of variables have changed such as is_legendary_1 whose coefficient was negative instead of positive in linear regression with outliers
 - Still used OneHotEncoder for random forest as decision trees still decide based on 'largeness' of values, which hierarchical data created by LabelEncoder will affect its accuracy
 - Random forest was slightly less accurate even with GridSearchCV (slightly lower train R^2 and higher test MSE) than linear regression due to its overfitting and bias due to basing its decision on many decision trees and nodes, same case without outliers 
 
@@ -33,7 +37,7 @@ Our project for SC1015 (Introduction to Data Science and Artificial Intelligence
 
 - Numeric variables have the highest linear correlation value with weight, especially height, which is primarily the reason why random forest did not perform as well as shown in the importance rankings (with numerical variablees generally having the highest ones)
 - In most cases (not all) linear regression without outliers would work the best due to less overfitting/bias and our predictors (especially numerical ones) having strong linear relationship with weight, however the model's reliability will drop significantly for pokemon with weights being outliers
-- We might also need to conduct EDA again to see the new distributions of the variables and find out they are still significant (or insignificant) (as seen from is_legendary example)
+- We might also need to conduct EDA again to see the new distributions of the variables and find out they are still significant (or insignificant) (as seen from is_legendary_1 example)
 - We may need to gather more data of significant categorical variables outside our dataset to improve accuracy of model, as of now it’s very dependent on numerical continuous variables as categorical variables don’t show a strong enough correlation/pattern
 - For now we will still use linear regression model without outliers to predict pokemon which seem to have average weight (as seen from their height or other factors), and linear regression with outliers for pokemon that are more likely to be outliers
 - Random forest as of now is more prone to overfitting and takes longer to run as well due to having to process many decision trees and deciding factors, even more so with GridSearchCV
